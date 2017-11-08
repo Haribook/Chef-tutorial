@@ -14,3 +14,6 @@ steps to be followed to test cookbooks on docker
   kitchen converge
   kitchen login
   kitchen destroy
+  
+  Chef-client to run a recipe on chef workstation
+  chek-client -z -o cookbookName::recipe
