@@ -3,3 +3,14 @@ http://serverspec.org/
 https://www.inspec.io/
 http://kitchen.ci/
 https://blogs.kamalika.net/blog/2014/12/19/test-infra-code-test-kitchen-docker-chef-zero/
+
+steps to be followed to test cookbooks on docker
+1.switch to cookbook that you would like to test
+2.initialize kitchen for a particular cookbook with
+  kitchen init  - -generate-gemfile - -driver=kitchen-docker
+3.update .kitchen.yml file with option
+  use_sudo: false
+4.Run 
+  kitchen converge
+  kitchen login
+  kitchen destroy
