@@ -17,3 +17,8 @@ steps to be followed to test cookbooks on docker
   
   Chef-client to run a recipe on chef workstation
   chek-client -z -o cookbookName::recipe
+  
+  chef-apply <path to recipe>
+  Example " chef-apply ./cookbooks/cookbookName/recipes/default.rb
+  
+  chef-client --local-mode -r "recipie[cookbookname::default]"
